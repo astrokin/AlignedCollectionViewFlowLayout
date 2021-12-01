@@ -302,7 +302,11 @@ open class AlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
         
         switch verticalAlignment {
         case .top:
-            let minY = layoutAttributes.reduce(CGFloat.greatestFiniteMagnitude) { min($0, $1.frame.minY) }
+            let filteredLayoutAttributes = layoutAttributes.filter { layoutAttribute in
+                   return layoutAttribute.representedElementCategory == .cell
+            }
+
+            let minY = filteredLayoutAttributes.reduce(CGFloat.greatestFiniteMagnitude) { min($0, $1.frame.minY) }
             return AlignmentAxis(alignment: .top, position: minY)
             
         case .bottom:
