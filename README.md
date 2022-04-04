@@ -1,3 +1,5 @@
+See: https://github.com/wantedly/AlignedCollectionViewFlowLayout/pull/1
+
 # AlignedCollectionViewFlowLayout
 
 [![Version](https://img.shields.io/cocoapods/v/AlignedCollectionViewFlowLayout.svg?style=flat)](http://cocoapods.org/pods/AlignedCollectionViewFlowLayout)
