@@ -77,6 +77,7 @@ private struct AlignmentAxis<A: Alignment> {
 /// over the horizontal and vertical alignment of the cells.
 /// You can use it to align the cells like words in a left- or right-aligned text
 /// and you can specify how the cells are vertically aligned in their row.
+@objc(WTAlignedCollectionViewFlowLayout)
 open class AlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     // MARK: - 🔶 Properties
