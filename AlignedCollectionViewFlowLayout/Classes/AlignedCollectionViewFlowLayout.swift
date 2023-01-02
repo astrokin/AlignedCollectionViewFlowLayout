@@ -286,7 +286,14 @@ open class AlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
         var lineFrame = layoutAttributes.frame
         lineFrame.origin.x = sectionInset.left
         lineFrame.size.width = lineWidth
-        return super.layoutAttributesForElements(in: lineFrame) ?? []
+        
+        let result = super.layoutAttributesForElements(in: lineFrame)
+        
+        if let result = result, !result.isEmpty {
+            return result
+        } else {
+            return [UICollectionViewLayoutAttributes()]
+        }
     }
     
     /// Copmutes the alignment axis with which to align the items represented by the `layoutAttributes` objects vertically.
