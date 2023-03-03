@@ -133,6 +133,8 @@ open class AlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
             default:
                 break
             }
+        default:
+            break
         }
         
         // It's safe to force-unwrap as `.leading` and `.trailing` are covered
